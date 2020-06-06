@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head> <title> Sciencefic Calculator </title>
+<style>
+.btn{
+width: 100%;
+height: 100%;
+border : 1px solid black;
+
+}
+.btn:hover{
+
+background-color: gray;
+color: white;
+
+
+
+
+
+}
+table{
+width : 800px;
+height : 600px;
+border : 5px solid black;
+
+}
+ #result{
+width: 300px;
+heigth: 200px;
+padding: 20px 30px;
+
+}
+
+
+
+
+</style>
+
+<body>
+<form name ="calc">
+<table id = "calc">
+<tr >
+<td colspan = 7> <input class = "btn" type ="text" name ="display" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder = "Welcome to Naresh Nirala's Calculator"> </td>
+
+</tr>
+
+
+<tr>
+<td> <input class = "btn" type ="button" value ="Sin" onClick ="calc.display.value = Math.sin(((calc.display.value)* Math.PI/180).toFixed(2)).toFixed(1)"> </td>
+<td> <input class = "btn" type ="button" value ="Cos" onClick ="calc.display.value = Math.cos(((calc.display.value)* Math.PI/180).toFixed(2)).toFixed(1)"> </td>
+<td> <input class = "btn" type ="button" value ="Tan" onClick ="calc.display.value = Math.tan(((calc.display.value)* Math.PI/180).toFixed(2)).toFixed(1)"> </td>
+<td> <input class = "btn" type ="button" value = "C" onClick ="calc.display.value=''"> </td>
+<td> <input class = "btn" type ="button" value = "%" onClick ="calc.display.value= (calc.display.value)/100"> </td>
+<td> <input class = "btn" type ="button" value = "Clr" onClick ="calc.display.value = (calc.display.value).substring(0,(calc.display.value).length -1)"> </td>
+<td> <input class = "btn" type ="button" value = "/" onClick ="calc.display.value+='/'"> </td>
+</tr>
+<tr>
+<td> <input class = "btn" type ="button" value ="PI" onClick ="calc.display.value = (Math.PI).toFixed(2)"> </td>
+<td> <input class = "btn" type ="button" value ="LN" onClick ="calc.display.value = Math.LN2" </td>
+<td> <input class = "btn" type ="button" value ="Log" onClick ="calc.display.value = Math.LOG2E"> </td>
+<td> <input class = "btn" type ="button" value = "7" onClick ="calc.display.value+='7'"> </td>
+<td> <input class = "btn" type ="button" value = "8" onClick ="calc.display.value+='8'"> </td>
+<td> <input class = "btn" type ="button" value = "9" onClick ="calc.display.value+='9'"> </td>
+<td> <input class = "btn" type ="button" value = "x" onClick ="calc.display.value+='*'"> </td>
+
+</tr>
+<tr>
+<td> <input class = "btn" type ="button" value ="1/x" onClick ="calc.display.value = 1/(calc.display.value)"> </td>
+<td> <input class = "btn" type ="button" value ="SQRT" onClick ="calc.display.value = Math.sqrt(calc.display.value)"> </td>
+<td> <input class = "btn" type ="button" value ="x2" onClick ="calc.display.value = Math.pow((calc.display.value),2)"> </td>
+<td> <input class = "btn" type ="button" value = "4" onClick ="calc.display.value+='4'"> </td>
+<td> <input class = "btn" type ="button" value = "5" onClick ="calc.display.value+='5'"> </td>
+<td> <input class = "btn" type ="button" value = "6" onClick ="calc.display.value+='6'"> </td>
+
+<td> <input class = "btn" type ="button" value = "-" onClick ="calc.display.value+='-'"> </td>
+
+</tr>
+<tr><td> <input class = "btn" type ="button" value ="{" onClick ="calc.display.value += '{'"> </td>
+<td> <input class = "btn" type ="button" value ="}" onClick ="calc.display.value += '}'"> </td>
+<td> <input class = "btn" type ="button" value ="^" onClick ="calc.display.value = Math.pow(calc.display.value, calc.display.value)"> </td>
+
+<td> <input class = "btn" type ="button" value = "1" onClick ="calc.display.value+='1'"> </td>
+<td> <input class = "btn" type ="button" value = "2" onClick ="calc.display.value+='2'"> </td>
+<td> <input class = "btn" type ="button" value = "3" onClick ="calc.display.value+='3'"> </td>
+<td> <input class = "btn" type ="button" value = "+" onClick ="calc.display.value+='+'"> </td>
+
+</tr>
+<tr> 
+<td> <input class = "btn" type ="button" value ="(" onClick ="calc.display.value += '('"> </td>
+<td> <input class = "btn" type ="button" value =")" onClick ="calc.display.value += ')'"> </td>
+<td> <input class = "btn" type ="button" value ="n!" onClick ="calc.display.value =factorial(calc.display.value);"> </td>
+
+<td> <input class = "btn" type ="button" value = "00" onClick = "calc.display.value+='00' "> </td>
+<td> <input class = "btn" type ="button" value = "0" onClick ="calc.display.value+='0'"> </td>
+<td> <input class = "btn" type ="button" value = "." onClick ="calc.display.value+='.' "> </td>
+<td> <input class = "btn" type = "button" value ="="  autofocus onClick ="calc.display.value= eval(calc.display.value)" > </td>
+</tr>
+
+
+
+</table>
+
+
+
+</form>
+
+<script>
+
+function factorial(n){
+  var answer = 1;
+  if(n == 0 || n == 1){
+    return answer;
+  }
+  else{
+    for(var i = n; i > 0; i--){
+      answer *= i ;
+    }
+  }
+  return answer;
+}
+
+</script>
+<form name ="temp">
+
+<h1 id = "tempConverter"> Change Cellisius Into Fahrenheit</h1>
+Result: <br>
+<input id="result" name="display2" type="text"> <br>
+<br>
+Enter Value of Cellisius: <br>
+<input type ="number" name="cellisius" id ="cellisius">
+<br>
+<br>
+<input type ="button" class ="temp_btn" value ="Get Value" onclick ="temp.display2.value = cellisiusToFahrenheit(cellisius.value)">
+</form>
+<script>
+function cellisiusToFahrenheit(cellisius){
+var fahrenheit = cellisius * 9/5 + 32;
+return fahrenheit;
+}
+
+</script>
+
+
+
+
+<form name ="simpleInt">
+<h1 > Find Simple Interest </h1>
+<input type="text" id ="result" name = "display3" ><br><br>
+Enter amount: <br>
+<input type ="number" name="amount"><br><br>
+Enter time: <br>
+<input type ="number" name ="time" ><br><br>
+Enter rate: <br>
+<input type ="number" name ="rate" ><br><br>
+<input type ="button" value= "Get Answer" onclick ="simpleInt.display3.value = SI(amount.value, time.value, rate.value);">
+</form>
+
+<script >
+function SI(a, t, r){
+var simpleInterest = (a * t * r)/100;
+return "The simple interest is " + simpleInterest + " and total amount is " + simpleInterest + a;
+}
+
+</script>
+
+<form name = "compoundInt">
+<h1 > Find compound Interest </h1>
+<input type="text" id ="result" name = "display4" ><br><br>
+Enter amount: <br>
+<input type ="number" name="amount"><br><br>
+Enter time: <br>
+<input type ="number" name ="time" ><br><br>
+Enter rate: <br>
+<input type ="number" name ="rate" ><br><br>
+<input type ="button" value= "Get Answer" onclick ="compoundInt.display4.value = CI(amount.value, time.value, rate.value);">
+
+
+</form>
+<script>
+function CI(a, t, r){
+if( a > 0 && t > 0 && r > 0){
+
+var ci =  a * Math.pow((1 + r/100), t).toFixed(2);
+return "The total amount including interest is: " + ci;
+}
+else {
+return "please enter correct data"
+}
+
+}
+
+
+</script>
+<form name ="quadEqn">
+<h1 > Find Solution of Quadratic Equation </h1>
+<input type="text" id ="result" name = "display5" ><br><br>
+Enter Value of a: <br>
+<input type ="number" name="a"><br><br>
+Enter Value of b: <br>
+<input type ="number" name ="b" ><br><br>
+Enter Value of c: <br>
+<input type ="number" name ="c" ><br><br>
+<input type ="button" value= "Get Answer" onclick ="quadEqn.display5.value = quadraticEquation(a.value, b.value, c.value);">
+
+
+
+</form>
+<script>
+function quadraticEquation(a, b, c){
+var d = b * b - 4 * a *c;
+var d_sqrt = Math.sqrt(d);
+if( d_sqrt >= 0){
+var x = (-b + d_sqrt)/2 *a;
+var y = (-b - d_sqrt)/2 *a;
+return " The required answer is " + x + " and " +y;
+}
+else{
+return "There is no real root of this equation";
+
+}
+}
+
+</script>
+
+
+</body>
+
+</head>
+
+</html> 
