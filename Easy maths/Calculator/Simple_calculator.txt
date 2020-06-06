@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><title> Simple Calculator </title>
+<style>
+
+</style>
+
+</head>
+<body>
+<form>
+<tb>
+<tr> table row 1 </tr>
+<tr> table row 2 </tr>
+<tr> table row 3 </tr>
+<tr> table row 4 </tr>
+<tr> table row 5 </tr>
+
+
+</tb>
+
+
+<form>
+
+
+</body>
+
+</html>

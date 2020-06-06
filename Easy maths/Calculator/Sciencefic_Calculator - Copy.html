@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head> <title> Sciencefic Calculator </title>
+<style>
+.btn{
+width: 100%;
+height: 100%;
+border : 1px solid black;
+
+}
+.btn:hover{
+
+background-color: gray;
+color: white;
+
+
+
+
+
+}
+table{
+width : 800px;
+height : 600px;
+border : 5px solid black;
+
+}
+</style>
+
+<body>
+<form name ="calc">
+<table id = "calc">
+<tr >
+<td colspan = 7> <input class = "btn" type ="text" name ="display" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder = "Welcome to Naresh Nirala's Calculator"> </td>
+
+</tr>
+
+
+<tr>
+<td> <input class = "btn" type ="button" value ="Sin" onClick ="calc.display.value = Math.sin(((calc.display.value)* Math.PI/180).toFixed(2)).toFixed(1)"> </td>
+<td> <input class = "btn" type ="button" value ="Cos" onClick ="calc.display.value = Math.cos(((calc.display.value)* Math.PI/180).toFixed(2)).toFixed(1)"> </td>
+<td> <input class = "btn" type ="button" value ="Tan" onClick ="calc.display.value = Math.tan(((calc.display.value)* Math.PI/180).toFixed(2)).toFixed(1)"> </td>
+<td> <input class = "btn" type ="button" value = "C" onClick ="calc.display.value=''"> </td>
+<td> <input class = "btn" type ="button" value = "%" onClick ="calc.display.value= (calc.display.value)/100"> </td>
+<td> <input class = "btn" type ="button" value = "Clr" onClick ="calc.display.value = (calc.display.value).substring(0,(calc.display.value).length -1)"> </td>
+<td> <input class = "btn" type ="button" value = "/" onClick ="calc.display.value+='/'"> </td>
+</tr>
+<tr>
+<td> <input class = "btn" type ="button" value ="PI" onClick ="calc.display.value = (Math.PI).toFixed(2)"> </td>
+<td> <input class = "btn" type ="button" value ="LN" onClick ="calc.display.value = Math.LN2" </td>
+<td> <input class = "btn" type ="button" value ="Log" onClick ="calc.display.value = Math.LOG2E"> </td>
+<td> <input class = "btn" type ="button" value = "7" onClick ="calc.display.value+='7'"> </td>
+<td> <input class = "btn" type ="button" value = "8" onClick ="calc.display.value+='8'"> </td>
+<td> <input class = "btn" type ="button" value = "9" onClick ="calc.display.value+='9'"> </td>
+<td> <input class = "btn" type ="button" value = "x" onClick ="calc.display.value+='*'"> </td>
+
+</tr>
+<tr>
+<td> <input class = "btn" type ="button" value ="1/x" onClick ="calc.display.value = 1/(calc.display.value)"> </td>
+<td> <input class = "btn" type ="button" value ="SQRT" onClick ="calc.display.value = Math.sqrt(calc.display.value)"> </td>
+<td> <input class = "btn" type ="button" value ="x2" onClick ="calc.display.value = Math.pow((calc.display.value),2)"> </td>
+<td> <input class = "btn" type ="button" value = "4" onClick ="calc.display.value+='4'"> </td>
+<td> <input class = "btn" type ="button" value = "5" onClick ="calc.display.value+='5'"> </td>
+<td> <input class = "btn" type ="button" value = "6" onClick ="calc.display.value+='6'"> </td>
+
+<td> <input class = "btn" type ="button" value = "-" onClick ="calc.display.value+='-'"> </td>
+
+</tr>
+<tr><td> <input class = "btn" type ="button" value ="{" onClick ="calc.display.value += '{'"> </td>
+<td> <input class = "btn" type ="button" value ="}" onClick ="calc.display.value += '}'"> </td>
+<td> <input class = "btn" type ="button" value ="^" onClick ="calc.display.value = Math.pow(calc.display.value, calc.display.value)"> </td>
+
+<td> <input class = "btn" type ="button" value = "1" onClick ="calc.display.value+='1'"> </td>
+<td> <input class = "btn" type ="button" value = "2" onClick ="calc.display.value+='2'"> </td>
+<td> <input class = "btn" type ="button" value = "3" onClick ="calc.display.value+='3'"> </td>
+<td> <input class = "btn" type ="button" value = "+" onClick ="calc.display.value+='+'"> </td>
+
+</tr>
+<tr> 
+<td> <input class = "btn" type ="button" value ="(" onClick ="calc.display.value += '('"> </td>
+<td> <input class = "btn" type ="button" value =")" onClick ="calc.display.value += ')'"> </td>
+<td> <input class = "btn" type ="button" value ="n!" onClick ="calc.display.value =factorial(calc.display.value);"> </td>
+
+<td> <input class = "btn" type ="button" value = "00" onClick = "calc.display.value+='00' "> </td>
+<td> <input class = "btn" type ="button" value = "0" onClick ="calc.display.value+='0'"> </td>
+<td> <input class = "btn" type ="button" value = "." onClick ="calc.display.value+='.' "> </td>
+<td> <input class = "btn" type = "button" value ="="  autofocus onClick ="calc.display.value= eval(calc.display.value)" >
+ </td>
+</tr>
+
+<input type ="button" value="History" onClick ="calc.display.value = history(calc.display.value);">
+
+</table>
+
+
+
+</form>
+
+
+
+
+<script>
+function history(val){
+var hisArray = [ ];
+hisArray.push(val);
+
+return hisArray;
+}
+
+</script>
+
+
+
+</body>
+
+</head>
+
+</html> 
