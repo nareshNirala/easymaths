@@ -31,6 +31,9 @@ text-align: center;
 </head>
 
 <body id="bodyImg">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+<div class="container-fluid">
+  <div class="container-fluid">
 <h1> Create your free Account </h1>
 <form id="signUpForm">
 Name: <input type="text" name="name" placeholder="Enter your name" required> <br>
@@ -38,11 +41,11 @@ Name: <input type="text" name="name" placeholder="Enter your name" required> <br
 Class: <input type="text" name="class" placeholder="Enter your class"> <br>
 
 Email: <input type="email" name="email" placeholder="Enter your email-id" required><br>
+<div class="row">
+<div class="col-xs-4">Gender:<label for="gender"> <input type="radio" name="gender" class="gender" value="male">  Male </label></div>
 
-Gender: <input type="radio" name="gender" class="gender" value="male"> <label for="gender"> Male </label>
-
-  <input type="radio" name="gender" class="gender" value="female"> Female  <br>
-
+ <div class="col-xs-4"><label for="gender"> <input type="radio" name="gender" class="gender" value="female"> Female  </label> </div><br>
+  </div>
 Date Of Birth: <input type="date" name="DOB" required><br>
 
 Mobile NO:  <input type="number" name="mobile" placeholder="Enter your mobile number" required><br>
@@ -51,13 +54,13 @@ Password: <input type="password" name="password" Placeholder="Enter password" re
 
 Conform password: <input type="password" name="conformPassword" placeholder="Conform your password" required><br>
 
-<input type="submit" name="submit" value="Submit">
+<input class="btn btn-block btn-primary" type="submit" name="submit" value="Submit">
 </form>
 <br> 
 
 
 
 
-
+  </div>
 </body>
 </html>
