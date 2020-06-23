@@ -1,5 +1,30 @@
 <!DOCTYPE html>
 <html>
+<!-- Link bootstrap link in Html -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+
+<!-- Link Awesome Icone link in Html -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+<!-- Adding jQuery from her -->
+
+<Script>
+$(document).ready(function(){
+$("h1").addClass("animated shake");
+
+});
+
+</script>
+
+
+
+
+
+
+
+
+
 <head> <title> Sign Up </title>
 <style>
 #bodyImg{
@@ -29,45 +54,62 @@ text-align: center;
 
 </style>
 </head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-
-
 
 <body id="bodyImg">
-  <div class="container-fluid">
-  
-  
+<div class="container-fluid">
 <h1> Create your free Account </h1>
-<form id="signUpForm">
-  <div class="row">
-    <div class="col-xs-7">
-Name: <input class="form-control" type="text" name="name" placeholder="Enter your name" required> <br>
-    </div>
-  </div>
-
-Class: <input type="text" name="class" placeholder="Enter your class"> <br>
-
-Email: <input type="email" name="email" placeholder="Enter your email-id" required><br>
+<form id="signUpForm" class="form-control">
 <div class="row">
-<div class="col-xs-4">Gender:<label for="gender"> <input type="radio" name="gender" class="gender" value="male">  Male </label></div>
+<div class="col-md-6">
+ First Name: <input  type="text" name="fname" placeholder="Enter your first name" required> 
+</div>
+<div class="col-md-6">
+Last Name: <input type="text" name="lname" placeholder="Enter your last name" required > 
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+Mobile NO:  <input type="number" name="mobile" placeholder="Enter your mobile number" required>
+</div>
+<div class="col-md-6">
+Email: <input type="email" name="email" placeholder="Enter your email-id" required>
+</div>
+</div>
 
- <div class="col-xs-4"><label for="gender"> <input type="radio" name="gender" class="gender" value="female"> Female  </label> </div><br>
+<div class="row">
+<div class="col-md-6">
+
+Gender: <input type="radio" name="gender" class="gender" value="male"> <label for="gender"> Male </label>
+</div>
+<div class="col-md-6">
+
+  <input type="radio" name="gender" class="gender" value="female"> Female  
   </div>
-Date Of Birth: <input type="date" name="DOB" required><br>
-
-Mobile NO:  <input type="number" name="mobile" placeholder="Enter your mobile number" required><br>
-
-Password: <input type="password" name="password" Placeholder="Enter password" required><br>
-
-Conform password: <input type="password" name="conformPassword" placeholder="Conform your password" required><br>
-
-  <button type="submit" class="btn btn-primary"> <i class="fa fa-paper-plane"> </i> Submit </button>
-    </form>
-<br> 
-
-
-
-
+  
   </div>
+<div class="row">
+<div class="col-md-6">
+Date Of Birth: <input type="date" name="DOB" required>
+</div>
+<div class="col-md-6">
+Class: <input type="text" name="class" placeholder="Enter your class"> 
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+Password: <input type="password" name="password" Placeholder="Enter password" required>
+</div>
+<div class="col-md-6">
+Conform password: <input type="password" name="conformPassword" placeholder="Conform your password" required>
+</div>
+</div>
+<button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"> </i> Submit </button>
+</form>
+ 
+
+
+
+</div>
+
 </body>
 </html>
